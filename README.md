@@ -1,3 +1,7 @@
+# UPDATE: 2014-11-18
+Android Bootstrap is now API 15+ only. I will also be implementing RxJava, Material design and a few other things into this app as well.
+There will be *no upgrade path* as Android Bootstrap is mean to act as a starting point for Android Applications.
+
 # Android Bootstrap App
 
 [![Build Status](https://travis-ci.org/AndroidBootstrap/android-bootstrap.svg?branch=master)](https://travis-ci.org/AndroidBootstrap/android-bootstrap)
