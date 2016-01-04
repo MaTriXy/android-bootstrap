@@ -8,14 +8,14 @@ import com.donnfelker.android.bootstrap.R;
 import com.donnfelker.android.bootstrap.core.User;
 import com.squareup.picasso.Picasso;
 
-import butterknife.InjectView;
+import butterknife.Bind;
 
 import static com.donnfelker.android.bootstrap.core.Constants.Extra.USER;
 
 public class UserActivity extends BootstrapActivity {
 
-    @InjectView(R.id.iv_avatar) protected ImageView avatar;
-    @InjectView(R.id.tv_name) protected TextView name;
+    @Bind(R.id.iv_avatar) protected ImageView avatar;
+    @Bind(R.id.tv_name) protected TextView name;
 
     private User user;
 
@@ -29,8 +29,8 @@ public class UserActivity extends BootstrapActivity {
             user = (User) getIntent().getExtras().getSerializable(USER);
         }
 
-        getActionBar().setHomeButtonEnabled(true);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Picasso.with(this).load(user.getAvatarUrl())
                 .placeholder(R.drawable.gravatar_icon)

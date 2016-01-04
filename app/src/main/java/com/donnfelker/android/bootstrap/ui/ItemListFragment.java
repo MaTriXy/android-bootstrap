@@ -2,12 +2,14 @@
 package com.donnfelker.android.bootstrap.ui;
 
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.LoaderManager;
-import android.content.Loader;
+
 import android.os.Bundle;
 
+import android.support.v4.app.Fragment;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.Loader;
 import android.view.LayoutInflater;
+
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -25,9 +27,9 @@ import com.donnfelker.android.bootstrap.R;
 import com.donnfelker.android.bootstrap.R.id;
 import com.donnfelker.android.bootstrap.R.layout;
 import com.donnfelker.android.bootstrap.authenticator.LogoutService;
-import com.github.kevinsawicki.wishlist.SingleTypeAdapter;
-import com.github.kevinsawicki.wishlist.Toaster;
-import com.github.kevinsawicki.wishlist.ViewUtils;
+import com.donnfelker.android.bootstrap.util.SingleTypeAdapter;
+import com.donnfelker.android.bootstrap.util.Toaster;
+import com.donnfelker.android.bootstrap.util.ViewUtils;
 
 import java.util.Collections;
 import java.util.List;
@@ -257,8 +259,8 @@ public abstract class ItemListFragment<E> extends Fragment
     }
 
     @Override
-    public void onLoaderReset(final Loader<List<E>> loader) {
-        // Intentionally left blank
+    public void onLoaderReset(Loader<List<E>> loader) {
+        // left empty by default
     }
 
     /**
